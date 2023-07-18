@@ -1,0 +1,281 @@
+/* ---------------------------------- Colors ---------------------------------- */
+:root {
+   /* ---------------------------------- Primary ---------------------------------- */
+   --soft-orange: hsl(35, 77%, 62%);
+   --soft-red: hsl(5, 85%, 63%);
+
+   /* ---------------------------------- Neutral ---------------------------------- */
+   --off-white: hsl(36, 100%, 99%);
+   --grayish-blue: hsl(233, 8%, 79%);
+   --dark-grayish-blue: hsl(236, 13%, 42%);
+   --very-dark-blue: hsl(240, 100%, 5%);
+}
+
+/* ---------------------------------- Reset ---------------------------------- */
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   /* overflow: hidden; */
+}
+
+html {
+   font-size: 62.5%;
+}
+
+/* ---------------------------------- General Styling ---------------------------------- */
+body {
+   font-family: "Inter", sans-serif;
+   font-size: 1.5rem;
+   /* height: 100vh; */
+   background: var(--off-white);
+}
+
+.container {
+   margin: auto;
+   width: 60%;
+}
+
+a {
+   cursor: pointer;
+   text-decoration: none;
+}
+
+li {
+   list-style: none;
+}
+
+.btn {
+   margin-top: 4rem;
+   display: inline-block;
+   text-transform: uppercase;
+   font-weight: 400;
+   letter-spacing: 0.5rem;
+   text-align: center;
+   background: var(--soft-red);
+   color: var(--off-white);
+   padding: 1.5rem 3rem;
+   cursor: pointer;
+}
+
+.btn:hover {
+   background: var(--very-dark-blue);
+   transition: 0.5s all;
+}
+
+/* ---------------------------------- Layout ---------------------------------- */
+/* ---------------------------------- Header ---------------------------------- */
+header {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   z-index: 100;
+   padding: 4rem 0;
+   background: var(--off-white);
+}
+
+header .content {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.navbar {
+   display: flex;
+   /* justify-content: space-between; */
+}
+
+.navbar li {
+   cursor: pointer;
+   padding: 2rem;
+}
+
+.navbar li a {
+   color: var(--dark-grayish-blue);
+}
+
+.navbar li a:hover {
+   color: var(--soft-red);
+   transition: 0.5s all;
+}
+
+/* ---------------------------------- Mobile Nav ---------------------------------- */
+.menu-icon {
+   display: none;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   row-gap: 1rem;
+   cursor: pointer;
+   z-index: 200;
+   transition: 0.4s;
+}
+
+.menu-icon div {
+   display: block;
+   background: var(--very-dark-blue);
+   height: 0.2rem;
+   width: 3rem;
+   margin: 0.5rem 0;
+   border-radius: 0.5rem;
+   transition: 0.4s;
+}
+
+.move .line1 {
+   transform: rotate(-45deg) translate(-0.5rem, 0.5rem);
+}
+
+.move .line2 {
+   opacity: 0;
+}
+
+.move .line3 {
+   transform: rotate(45deg) translate(-0.5rem, -0.5rem);
+}
+
+/* ---------------------------------- Section: Main Styling ---------------------------------- */
+main {
+   margin-top: 14rem;
+}
+
+main .grid {
+   display: grid;
+   grid-template-columns: 5fr 3fr;
+   gap: 2rem;
+}
+
+main .item-1 {
+   display: flex;
+   flex-direction: column;
+}
+
+main .item-1 img {
+   width: 100%;
+}
+
+main .item-1 img.mobile {
+   display: none;
+}
+
+main .item-1 .text {
+   margin-top: 2rem;
+   display: flex;
+   justify-content: space-between;
+   gap: 2rem;
+}
+
+main .item-1 .text h1 {
+   font-size: 4rem;
+   line-height: 5rem;
+   flex: 1.5;
+}
+
+main .item-1 .text div {
+   flex: 2;
+}
+
+/* ---------------------------------- Section: New Styling ---------------------------------- */
+main .item-2 {
+   background: var(--very-dark-blue);
+   padding: 3rem;
+}
+
+main .item-2 span {
+   font-size: 4rem;
+   color: var(--soft-orange);
+}
+
+main .item-2 li {
+   padding: 3rem 0;
+   border-bottom: 1px solid var(--dark-grayish-blue);
+}
+
+main .item-2 li:last-child {
+   border: none;
+   padding-bottom: 0;
+}
+
+main .item-2 h3 a {
+   font-size: 2rem;
+   color: var(--off-white);
+   cursor: pointer;
+}
+
+main .item-2 h3 a:hover {
+   color: var(--soft-orange);
+   transition: 0.5s all;
+}
+
+main .item-2 p {
+   padding-top: 2rem;
+   color: var(--grayish-blue);
+}
+
+/* ---------------------------------- Section: Popular Styling ---------------------------------- */
+#popular {
+   margin: 6rem 0;
+}
+
+#popular .grid {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+}
+
+.box {
+   display: flex;
+   gap: 2rem;
+}
+
+.box img {
+   width: 8rem;
+}
+
+.box .text-content {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+
+.box .text-content h2 {
+   color: var(--grayish-blue);
+}
+
+.box .text-content h3 a {
+   color: var(--very-dark-blue);
+}
+
+.box .text-content h3 a:hover {
+   color: var(--soft-red);
+   transition: 0.5s all;
+}
+
+.box .text-content p {
+   color: var(--dark-grayish-blue);
+   padding-right: 5rem;
+}
+
+/* ---------------------------------- Scroll to Top ---------------------------------- */
+.scroll-top {
+   position: fixed;
+   bottom: -100rem;
+   right: 2rem;
+   z-index: 300;
+}
+
+.scroll-top i {
+   padding: 1.6rem;
+   color: var(--bg-color);
+   background: var(--box-color);
+   border-radius: 1rem;
+}
+
+.scroll-top i:hover {
+   background: var(--main-color);
+   transition: 0.3s all linear;
+}
+
+.scroll-active {
+   bottom: 4rem;
+   transition: 1.2s all ease-in-out;
+}
